@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Registration</title>
+
+        <body>
+       
+            <script>
+                function validation()
+                 {
+                if (isEmpty(document.getElementById('data_2').value.trim())) {
+                alert('First name is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_3').value.trim())) {
+                alert('Last name is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_4').value.trim())) {
+                alert('Phone is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_5').value.trim())) {
+                alert('Email is required!');
+                return false;
+                }
+
+                if (!validateEmail(document.getElementById('data_5').value.trim())) {
+                alert('Email must be a valid email address!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_6').value.trim())) {
+                alert('Arrival date is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_7').value.trim())) {
+                alert('Departure date is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_8').value.trim())) {
+                alert('Number of adults is required!');
+                return false;
+                }
+                
+                var data_6= document.getElementById("data_6").value.trim();
+                var data_7= document.getElementById("data_7").value.trim();
+                if(data_6 > data_7){
+                alert("Arrival date cannot be after Departure date");
+                return false;
+                }
+                
+                 return true;
+                }
+                function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+                function validateEmail(email) {
+                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                return isEmpty(email) || re.test(email);
+                }
+               
+            
+                </script>
+    </head>
+<body>
+    <body background="https://static.vecteezy.com/system/resources/thumbnails/026/443/618/original/multimedia-screen-display-showing-a-collection-of-colorful-apps-icons-background-video.jpg"</body>
+    
+
+    <form  method="post" action="file:///C:/Users/youni/Desktop/ui%20development/GURU%20FINAL%20PROJECT/loginvalidation.html" onSubmit="return validation();">
+        <div style="max-width: 400px;">
+        </div>
+
+        <div style="padding-bottom: 18px;font-size : 24px;"><center>Registration</center></div>
+        <center><div style="padding-bottom: 18px;">FirstName<span style="color: red;"> *</span><br/>
+            <input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control"/>
+            </div></center>
+            <center><div style="padding-bottom: 18px;">LastName<span style="color: red;"> *</span><br/>
+                <input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control"/>
+                </div></center>            
+    <center><div style="padding-bottom: 18px;">Phone<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control"/>
+        </div></center>
+
+    <center> <div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_5" name="data_5" style="max-width : 450px;" class="form-control"/>
+        </div></center>
+
+    <center><div style="padding-bottom: 18px;">gender<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_6" name="data_6" style="max-width : 250px;" class="form-control"/>
+        </div></center>
+        
+        <script>new day({ field: document.getElementById('data_6') });</script>
+    <center><div style="padding-bottom: 18px;">education<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_7" name="data_7" style="max-width : 250px;" class="form-control"/>
+        </div></center>
+        
+        <script>new day({ field: document.getElementById('data_7') });</script>
+    <center><div style="padding-bottom: 18px;">UserName<span style="color: red;"> *</span><br/>
+        <input type="number" id="data_8" name="data_8" style="max-width : 250px;" class="form-control"/>
+        </div></center>
+
+    <center><div style="padding-bottom: 18px;">Password<br/>
+        <input type="number" id="data_9" name="data_9" style="max-width : 250px;" class="form-control"/>
+        </div></center>
+
+    <center><div style="padding-bottom: 18px;">Address<br/>
+        <textarea id="data_10" false name="data_10" style="max-width : 450px;" rows="6" class="form-control"></textarea>
+        </div></center>
+
+    <center><div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+        <div></center>
+       
+        </form>
+</body>
+
+</html>

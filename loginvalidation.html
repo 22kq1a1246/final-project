@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>LoginValidation</title>
+    <script>
+        function LoginValidation(){
+        var uname=document.myform.UserName.value;
+        var Password=document.myform.Password.value;
+        if(uname==null || uname==""){
+        alert("name cannot be blank")
+        return false;
+        }
+        else if(Password.length<6){
+            alert("password must be 6 letters")
+            return false
+        }
+            return true
+    }
+    </script>
+    </head>
+    <body background="https://media.licdn.com/dms/image/C4D1BAQHxINS0YZXisg/company-background_10000/0/1583792331401/login_nl_cover?e=2147483647&v=beta&t=2JAw5A2BBCd-5HDuUfdOcZDbdPiXKnDysc3kf-kwKyg"></body>
+    <body>
+        <center><h2>Login page</h2></center>
+
+        <form name ="myform" action ="file:///C:/Users/youni/Desktop/ui%20development/GURU%20FINAL%20PROJECT/webpage2.html"
+        onsubmit ="return LoginValidation(this)">
+   <center> UserName=<input type ="text"name="UserName"placeholder="UserName"><br><br></center>
+<center> Password=<input type="Password"name="Password"placeholder="Password"><br><br></center>
+<center><input type="submit"value="submit"></center>
+</form>
+    </body>
+</html>
